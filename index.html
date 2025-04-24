@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filmdatabasen</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <h1>Antons filmtips</h1>
+  </header>
+
+  <section id="controls">
+    <button id="popular-btn">Populära filmer</button>
+    <button id="top-rated-btn">Bäst rankade filmer</button>
+  </section>
+
+  <section id="search-section">
+    <form id="search-form">
+      <input type="text" placeholder="Sök efter film eller person..." />
+      <label><input type="radio" name="type" value="movie" checked /> Film</label>
+      <label><input type="radio" name="type" value="person" /> Person</label>
+      <button type="submit">Sök</button>
+    </form>
+  </section>
+
+  <section id="sort-section">
+    <label for="sort-select">Sortera:</label>
+    <select id="sort-select">
+      <option value="nameAsc">Namn (A–Ö)</option>
+      <option value="nameDesc">Namn (Ö–A)</option>
+      <option value="scoreAsc">Betyg (Lägst)</option>
+      <option value="scoreDesc">Betyg (Högst)</option>
+    </select>
+  </section>
+
+  <section id="movies"></section>
+  <section id="top-rated" style="display: none;"></section>
+  <section id="search-results"></section>
+
+  <script type="module" src="./main.js"></script>
+
+</body>
+</html>
